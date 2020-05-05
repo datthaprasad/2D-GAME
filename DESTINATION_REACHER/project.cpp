@@ -1733,6 +1733,7 @@ void display(void)				//To display
 	if(level==2&&done==0)
 	{
 		done=1;
+
 		a=1000;
 	}
 if(level==1)
