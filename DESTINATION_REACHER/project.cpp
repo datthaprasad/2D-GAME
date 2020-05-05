@@ -1,3 +1,4 @@
+//#include<windows.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<GL/glut.h>
@@ -44,7 +45,7 @@ void trees()							//To draw a tree in level 1
 	glTranslated(-100,0,0);
 
 	glBegin(GL_POLYGON);				//tree1
-	glColor3f(0.3,0.1,0.0);             //base polygon
+	glColor3f(0.3,0.1,0.0);
 	glVertex2f(a+500,200);
 	glVertex2f(a+530,450);
 	glVertex2f(a+550,450);
@@ -52,7 +53,7 @@ void trees()							//To draw a tree in level 1
 	glVertex2f(a+530,200);
 	glEnd();
 
-	glBegin(GL_POLYGON);                //intermediate polygon right
+	glBegin(GL_POLYGON);
 	glColor3f(0.3,0.1,0.0);
 	glVertex2f(a+535,450);
 	glVertex2f(a+565,500);
@@ -61,7 +62,7 @@ void trees()							//To draw a tree in level 1
 	glEnd();
 
 	glLineWidth(10.0);
-	glBegin(GL_LINES);              //intermediate left
+	glBegin(GL_LINES);
 	glColor3f(0.3,0.1,0.0);
 	glVertex2f(a+535,440);
 	glVertex2f(a+485,555);
@@ -71,16 +72,16 @@ void trees()							//To draw a tree in level 1
 	glVertex2f(a+595,565);
 	glEnd();
 
-glLineWidth(6.0);
-/*glBegin(GL_LINES);
+	glLineWidth(6.0);
+	glBegin(GL_LINES);
 	glColor3f(0.3,0.1,0.0);
 	glVertex2f(a+514,490);
 	glVertex2f(a+535,555);
-	glEnd();*/
+	glEnd();
 
-glLineWidth(5.0);
+	glLineWidth(5.0);
 	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);     //right above leaf
+	glColor3f(0.3,0.1,0.0);
 	glVertex2f(a+548,555);
 	glVertex2f(a+570,590);
 	glVertex2f(a+578,515);
@@ -88,22 +89,22 @@ glLineWidth(5.0);
 	glEnd();
 
 	glLineWidth(3.0);
-    /*glBegin(GL_LINES);
+	glBegin(GL_LINES);
 	glColor3f(0.3,0.1,0.0);
 	glVertex2f(a+500,515);
 	glVertex2f(a+520,565);
-	glEnd();*/
+	glEnd();
 
  	glColor3f(0.4,0.6,0.0);
-      	drwcl(a+514,510,50,0,360);			//leaf  ->bottom left most leaf
-      	drwcl(a+585,520,50,0,360);          //right bottom leaf
-      	drwcl(a+515,565,40,0,360);          //left intermediate
-      	drwcl(a+584,580,40,0,360);          //right intermediate
-      	drwcl(a+534,610,30,0,360);          //top most
+      	drwcl(a+514,510,50,0,360);			//leaf
+      	drwcl(a+585,520,50,0,360);
+      	drwcl(a+515,565,40,0,360);
+      	drwcl(a+584,580,40,0,360);
+      	drwcl(a+534,610,30,0,360);
 	glPopMatrix();
 
-glPushMatrix();
-	glTranslated(-200,0,0);
+	glPushMatrix();
+	glTranslated(-720,0,0);
 
 	glBegin(GL_POLYGON);				//tree2
 	glColor3f(0.3,0.1,0.0);
@@ -351,58 +352,186 @@ glPushMatrix();
 	}
 }
 
+void trees1()						//to draw a tree in level 2
+{
+	if(level==2)
+	{
+	glPushMatrix();
+	glTranslated(150,0,0);
 
+	glBegin(GL_POLYGON);
+	glColor3f(0.3,0.1,0.0);				//tree1
+	glVertex2f(a+500,200);
+	glVertex2f(a+530,450);
+	glVertex2f(a+550,450);
+	glColor3f(0.0,0.0,0.0);
+	glVertex2f(a+530,200);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+535,450);
+	glVertex2f(a+565,500);
+	glVertex2f(a+578,500);
+	glVertex2f(a+550,450);
+	glEnd();
+
+	glLineWidth(10.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+535,440);
+	glVertex2f(a+485,555);
+	glVertex2f(a+570,500);
+	glVertex2f(a+535,585);
+	glVertex2f(a+575,500);
+	glVertex2f(a+595,565);
+	glEnd();
+
+	glLineWidth(6.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+514,490);
+	glVertex2f(a+535,555);
+	glEnd();
+
+	glLineWidth(5.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+548,555);
+	glVertex2f(a+570,590);
+	glVertex2f(a+578,515);
+	glVertex2f(a+635,580);
+	glEnd();
+
+	glLineWidth(3.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+500,515);
+	glVertex2f(a+520,565);
+	glEnd();
+
+ 	glColor3f(0.4,0.6,0.0);
+      	drwcl(a+514,510,50,0,360);			//leaf
+      	drwcl(a+585,520,50,0,360);
+      	drwcl(a+515,565,40,0,360);
+      	drwcl(a+584,580,40,0,360);
+      	drwcl(a+534,610,30,0,360);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-350,0,0);
+
+	glBegin(GL_POLYGON);				//tree2
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+500,200);
+	glVertex2f(a+530,450);
+	glVertex2f(a+550,450);
+	glColor3f(0.0,0.0,0.0);
+	glVertex2f(a+530,200);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+535,450);
+	glVertex2f(a+565,500);
+	glVertex2f(a+578,500);
+	glVertex2f(a+550,450);
+	glEnd();
+
+	glLineWidth(10.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+535,440);
+	glVertex2f(a+485,555);
+	glVertex2f(a+570,500);
+	glVertex2f(a+535,585);
+	glVertex2f(a+575,500);
+	glVertex2f(a+595,565);
+	glEnd();
+
+	glLineWidth(6.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+514,490);
+	glVertex2f(a+535,555);
+	glEnd();
+
+	glLineWidth(5.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+548,555);
+	glVertex2f(a+570,590);
+	glVertex2f(a+578,515);
+	glVertex2f(a+635,580);
+	glEnd();
+
+	glLineWidth(3.0);
+	glBegin(GL_LINES);
+	glColor3f(0.3,0.1,0.0);
+	glVertex2f(a+500,515);
+	glVertex2f(a+520,565);
+	glEnd();
+
+ 	glColor3f(0.4,0.6,0.0);
+      	drwcl(a+514,510,50,0,360);			//leaf
+      	drwcl(a+585,520,50,0,360);
+      	drwcl(a+515,565,40,0,360);
+      	drwcl(a+584,580,40,0,360);
+      	drwcl(a+534,610,30,0,360);
+	glPopMatrix();
+	}
+}
 
 void backbuild()					//to draw a buildings in level1
 {
 	if(level==1)
 	{
 	glPushMatrix();
-	glTranslated(-500,0,0);
+	glTranslated(-250,0,0);
 
-glColor3f(0.35,0.16,0.14);
-	glBegin(GL_POLYGON);				//build 1     backgroumd brown
+	glColor3f(0.35,0.16,0.14);
+	glBegin(GL_POLYGON);				//build 1
 	glVertex2f(buildmove,150);
 	glVertex2f(buildmove,700);
 	glVertex2f(buildmove+250,700);
 	glVertex2f(buildmove+250,150);
 	glEnd();
 
-glColor3f(1.0,0.0,0.0);
+	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+50,600);
-	glVertex2f(buildmove+50,650);       //first left side window
+	glVertex2f(buildmove+50,650);
 	glVertex2f(buildmove+100,650);
 	glVertex2f(buildmove+100,600);
 	glEnd();
 
-glColor3f(1.0,0.0,0.0);
-	glBegin(GL_POLYGON);                //right top window
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+150,600);
 	glVertex2f(buildmove+150,650);
 	glVertex2f(buildmove+200,650);
 	glVertex2f(buildmove+200,600);
 	glEnd();
 
-glColor3f(1.0,0.0,0.0);
+	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+50,500);
-	glVertex2f(buildmove+50,550);       //left bottom window
+	glVertex2f(buildmove+50,550);
 	glVertex2f(buildmove+100,550);
 	glVertex2f(buildmove+100,500);
 	glEnd();
 
-glColor3f(1.0,0.0,0.0);
+	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+150,500);
-	glVertex2f(buildmove+150,550);      //right bottom
+	glVertex2f(buildmove+150,550);
 	glVertex2f(buildmove+200,550);
 	glVertex2f(buildmove+200,500);
 	glEnd();
 
 	glColor3f(1.0,0.0,0.0);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+100,150);          //door
+	glVertex2f(buildmove+100,150);
 	glVertex2f(buildmove+100,350);
 	glVertex2f(buildmove+150,350);
 	glVertex2f(buildmove+150,150);
@@ -458,12 +587,114 @@ glColor3f(1.0,0.0,0.0);
 	glPopMatrix();
 	}
 
+	if(level==2)						//to draw a building in level2
+	{
+	glPushMatrix();
+	glTranslated(-290,0,0);
+
+	glColor3f( 0.858824,0.858824,0.439216);			//build 1
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove,150);
+	glVertex2f(buildmove,700);
+	glVertex2f(buildmove+250,700);
+	glVertex2f(buildmove+250,150);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+50,600);
+	glVertex2f(buildmove+50,650);
+	glVertex2f(buildmove+100,650);
+	glVertex2f(buildmove+100,600);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+150,600);
+	glVertex2f(buildmove+150,650);
+	glVertex2f(buildmove+200,650);
+	glVertex2f(buildmove+200,600);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+50,500);
+	glVertex2f(buildmove+50,550);
+	glVertex2f(buildmove+100,550);
+	glVertex2f(buildmove+100,500);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+150,500);
+	glVertex2f(buildmove+150,550);
+	glVertex2f(buildmove+200,550);
+	glVertex2f(buildmove+200,500);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+100,150);
+	glVertex2f(buildmove+100,350);
+	glVertex2f(buildmove+150,350);
+	glVertex2f(buildmove+150,150);
+	glEnd();
+
+	glColor3f( 0.858824,0.858824,0.439216);			//build 2
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+500,150);
+	glVertex2f(buildmove+500,700);
+	glVertex2f(buildmove+750,700);
+	glVertex2f(buildmove+750,150);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+550,600);
+	glVertex2f(buildmove+550,650);
+	glVertex2f(buildmove+600,650);
+	glVertex2f(buildmove+600,600);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+650,600);
+	glVertex2f(buildmove+650,650);
+	glVertex2f(buildmove+700,650);
+	glVertex2f(buildmove+700,600);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+550,500);
+	glVertex2f(buildmove+550,550);
+	glVertex2f(buildmove+600,550);
+	glVertex2f(buildmove+600,500);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+650,500);
+	glVertex2f(buildmove+650,550);
+	glVertex2f(buildmove+700,550);
+	glVertex2f(buildmove+700,500);
+	glEnd();
+
+	glColor3f(1.0,0.0,0.0);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+600,150);
+	glVertex2f(buildmove+600,350);
+	glVertex2f(buildmove+650,350);
+	glVertex2f(buildmove+650,150);
+	glEnd();
+	glPopMatrix();
+	}
 }
 
 void mplatform()
 {
 	glColor3f(0.0,0.0,0.0);				//main platform
-	glBegin(GL_QUADS);
+	glBegin(GL_POLYGON);
 	glVertex2f(0,0);
 	glVertex2f(0,200);
 	glVertex2f(1000,200);
@@ -602,6 +833,8 @@ void platform()						//To draw a platform
 	glLineWidth(2);
 	if(level==1)
 	glColor3f(0.0,0.0,0.0);
+	else
+	glColor3f(0.0,0.0,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(0,0);
 	glVertex2f(0,200);
@@ -616,6 +849,8 @@ void stickman()						//To draw a stickman
 	glLineWidth(15);
 	if(level==1)
 	glColor3f(0.0,0.0,0.0);
+	else
+	glColor3f(0.0,0.0,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(com+10,s+90);
 	glVertex2f(com+26,s+89);
@@ -626,7 +861,9 @@ void stickman()						//To draw a stickman
 	glBegin(GL_LINES);
 	if(level==1)
 	glColor3f(0.0,0.0,0.0);
-	glVertex2f(com+20,s+100);
+	else
+	glColor3f(0.0,0.0,0.0);
+    	glVertex2f(com+20,s+100);
 	glVertex2f(com+15,s+40);
 	glVertex2f(com+15,s+41);
 	glVertex2f(llegmov,s+8);
@@ -720,6 +957,75 @@ void move3(void)						//Move function
 			}
 			a-=0.7;
 			buildmove-=0.7;
+
+		}
+		if(level==2)
+		{
+			if(((a+300<225)&&s<250&&(a+300>208))||(s<=250&&(a+300>162)&&(a+350<230)))
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+358<225)&&s<250&&(a+358>208))||(s<=250&&(a+358>162)&&(a+408<230)))
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+515<225)&&s<250&&(a+515>208))||(s<=250&&(a+515>162)&&(a+565<230)))
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+725<225)&&s>200&&(a+725>208))||(s>=200&&(a+725>162)&&(a+725<230))&&!roll)
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+935<225)&&s<250&&(a+935>208))||(s<=250&&(a+935>162)&&(a+985<230)))
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+1015<225)&&s<250&&(a+1015>208))||(s<=250&&(a+1015>162)&&(a+1065<230)))
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+1155<225)&&s>200&&(a+1155>208))||(s>=200&&(a+1155>162)&&(a+1155<230))&&!roll)
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+1305<225)&&s>200&&(a+1305>208))||(s>=200&&(a+1305>162)&&(a+1305<230))&&!roll)
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			if(((a+1475<225)&&s<250&&(a+1475>208))||(s<=250&&(a+1475>162)&&(a+1525<230)))
+			{
+				lost=1;
+		    		glutIdleFunc(NULL);
+	        		showf=1;
+				glutPostRedisplay();
+			}
+			a-=0.86;
+			buildmove-=0.86;
 
 		}
 
@@ -902,13 +1208,87 @@ void move(void)
 				buildmove-=0.7;
 	}
 
+	if(level==2)
+	{
+		if(((a+300<225)&&s<250&&(a+300>208))||(s<=250&&(a+300>162)&&(a+350<230)))
+		{
+			lost=1;
+			glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+    		if(((a+358<225)&&s<250&&(a+358>208))||(s<=250&&(a+358>162)&&(a+408<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+515<225)&&s<250&&(a+515>208))||(s<=250&&(a+515>162)&&(a+565<230)))
+		{
+	            	lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+725<225)&&s>200&&(a+725>208))||(s>=200&&(a+725>162)&&(a+725<230))&&!roll)
+		{
+                 	lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+935<225)&&s<250&&(a+935>208))||(s<=250&&(a+935>162)&&(a+985<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1015<225)&&s<250&&(a+1015>208))||(s<=250&&(a+1015>162)&&(a+1065<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1155<225)&&s>200&&(a+1155>208))||(s>=200&&(a+1155>162)&&(a+1155<230))&&!roll)
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1305<225)&&s>200&&(a+1305>208))||(s>=200&&(a+1305>162)&&(a+1305<230))&&!roll)
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1475<225)&&s<250&&(a+1475>208))||(s<=250&&(a+1475>162)&&(a+1525<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		a-=0.86;
+		buildmove-=0.86;
+	}
 		if((s-50.0)==300.0&&count==35)
 		glutIdleFunc(move3);
 glutPostRedisplay();
 }
 
+
 void move2(void)
+
 {
+
+	 //mciSendString("pause pirate", NULL, 0, NULL);
+	//			 mciSendString("play pirate", NULL, 0, NULL);
+
 	downflag=1;
 	if(level==1)
 	{
@@ -971,6 +1351,72 @@ void move2(void)
 		}
 	}
 
+	if(level==2)
+	{
+		if(((a+300<225)&&s<250&&(a+300>218))||(s<=250&&(a+300>162)&&(a+350<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+358<225)&&s<250&&(a+358>208))||(s<=250&&(a+358>162)&&(a+408<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+515<225)&&s<250&&(a+515>208))||(s<=250&&(a+515>162)&&(a+565<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+725<225)&&s>200&&(a+725>208))||(s>=200&&(a+725>162)&&(a+725<230))&&!roll)
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+935<225)&&s<250&&(a+935>208))||(s<=250&&(a+935>162)&&(a+985<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1015<225)&&s<250&&(a+1015>208))||(s<=250&&(a+1015>162)&&(a+1065<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1155<225)&&s>200&&(a+1155>208))||(s>=200&&(a+1155>162)&&(a+1155<230))&&!roll)
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1305<225)&&s>200&&(a+1305>208))||(s>=200&&(a+1305>162)&&(a+1305<230))&&!roll)
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+		if(((a+1475<225)&&s<250&&(a+1475>208))||(s<=250&&(a+1475>162)&&(a+1525<230)))
+		{
+			lost=1;
+		    	glutIdleFunc(NULL);
+	        	showf=1;
+			glutPostRedisplay();
+		}
+	}
 	if((s-50.0)<=300.0)
 	{
 		score+=1 ;
@@ -982,7 +1428,11 @@ void move2(void)
 			a-=0.7;
 			buildmove-=0.7;
 		}
-
+		if(level==2)
+		{
+			a-=0.86;
+			buildmove-=0.86;
+		}
 		count=0;
 	}
 	else
@@ -1060,12 +1510,90 @@ void blocklevel1()				//To draw a blocks in level 1
 	glEnd();
 }
 
+void blocklevel2()				//To draw a blocks in level 2
+{
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 1
+	glVertex2f(a+300,200);
+	glVertex2f(a+300,250);
+	glVertex2f(a+350,250);
+	glVertex2f(a+350,200);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 2
+	glVertex2f(a+358,200);
+	glVertex2f(a+358,250);
+	glVertex2f(a+408,250);
+	glVertex2f(a+408,200);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 3
+	glVertex2f(a+515,200);
+	glVertex2f(a+515,250);
+	glVertex2f(a+565,200);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 4
+	glVertex2f(a+725,270);
+	glVertex2f(a+725,320);
+	glVertex2f(a+775,320);
+	glVertex2f(a+775,270);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 5
+	glVertex2f(a+935,200);
+	glVertex2f(a+935,250);
+	glVertex2f(a+985,250);
+	glVertex2f(a+985,200);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 6
+	glVertex2f(a+1015,200);
+	glVertex2f(a+1015,250);
+	glVertex2f(a+1065,250);
+	glVertex2f(a+1065,200);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 7
+	glVertex2f(a+1155,270);
+	glVertex2f(a+1155,320);
+	glVertex2f(a+1205,320);
+	glVertex2f(a+1205,270);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 8
+	glVertex2f(a+1305,270);
+	glVertex2f(a+1305,320);
+	glVertex2f(a+1355,320);
+	glVertex2f(a+1355,270);
+	glEnd();
+
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_POLYGON);			//block 9
+	glVertex2f(a+1475,200);
+	glVertex2f(a+1475,250);
+	glVertex2f(a+1525,250);
+	glVertex2f(a+1525,200);
+	glEnd();
+}
 
 void show()
 {
 	if(level==1)
 	{
 		blocklevel1();
+	}
+	else if(level==2)
+	{
+		glColor3f(0.0,0.0,0.0);
+		println(a+-600,800,"****** LEVEL 1 COMPLETED ******");
 	}
 }
 
@@ -1093,7 +1621,7 @@ void instructfunc()				//To view the instruction
 
 void display(void)				//To display
 {
-	if(instruct==1)
+		if(instruct==1)
 	{
 		glClear(GL_COLOR_BUFFER_BIT);
 		glClearColor(0.1,0.2,0.3,0.4);
@@ -1101,25 +1629,32 @@ void display(void)				//To display
 	}
     	else if(mainpage==0)
 	{
-        mciSendString("pause kgf", NULL, 0, NULL);
-        mciSendString("play pirate repeat", NULL, 0, NULL);
+
+     		 mciSendString("pause kgf", NULL, 0, NULL);
+    		 mciSendString("play pirate repeat", NULL, 0, NULL);
 		glClear(GL_COLOR_BUFFER_BIT);
 		if(level==1)
 		glClearColor(0.2,0.3,0.7,0.9);
-        backbuild();
+		else
+		glClearColor(0.2,0.3,0.7,0.9);
+		backbuild();
 		platform();
 		cloud();
 		trees();
-
+		trees1();
 
 	if(showf)
 	{
 		if(level==1)
 		glColor3f(1.0,1.0,1.0);
+		else
+		glColor3f(1.0,1.0,1.0);
 		mciSendString("pause pirate", NULL, 0, NULL);
 		mciSendString("open \"fail_opengl.wav\" type mpegvideo alias f", NULL, 0, NULL);
-        mciSendString("play f ", NULL, 0, NULL);
-        println(500,500,"Game Over");
+		 mciSendString("play f ", NULL, 0, NULL);
+
+
+		println(500,500,"Game Over");
 		println(500,450,"Score:");
 		for(i=0;i<=n;i++)
 		{
@@ -1153,7 +1688,10 @@ void display(void)				//To display
 			else if(num[i]==0)
 				println(550+shift,450,"0");
 		}
+
+
 	}
+
 	if(down==0)
 	stickman();
 	else
@@ -1163,6 +1701,8 @@ void display(void)				//To display
 		downcount+=2;
 		glPushMatrix();
 		if(level==1)
+		glColor3f(0.0,0.0,0.0);
+		else
 		glColor3f(0.0,0.0,0.0);
 		glTranslatef(225.0,225.0,0);
 		circle_draw(1);
@@ -1175,17 +1715,31 @@ void display(void)				//To display
 			downcount=0;
 		}
 	}
-
+	if(a+1475<=(-5)&&level==2)
+	{
+		done=0;
+		level=3;
+		glutIdleFunc(NULL);
+		glColor3f(1.0,1.0,1.0);
+		println(350,900,"Level 2 completed");
+		lost=1;
+	}
 	if(buildmove+750<=(-5))
 		buildmove=1000;
 	if(a+2250<=0&&level==1)
 	{
-		done=0;level=2;  //future can implement level 2
+		done=0;level=2;
 	}
-    if(level==1)
+	if(level==2&&done==0)
+	{
+		done=1;
+		a=1000;
+	}
+if(level==1)
 	blocklevel1();
 	show();
-	//future implementation for more level
+if(level==2)
+	blocklevel2();
 
 	}
 	else
@@ -1228,9 +1782,7 @@ void display(void)				//To display
 		println(720,290,"* Press DOWN for Instructions");
 		glColor3f(0.0,0.5,1.0);
 		println(720,230,"* Press q to QUIT");
-		mplatform();
-
-	}
+		mplatform();}
 	glFlush();
 }
 
@@ -1239,19 +1791,21 @@ void keyboard(unsigned char key,int x,int y)
 	if(key=='w'|key=='W')
 		if(flag!=1&&upflag!=1&&!showf)
 		{
-		    if(mainpage==0&&instruct==0){
+			if(mainpage==0&&instruct==0){
 				mciSendString("close j", NULL, 0, NULL);
 				mciSendString("open \"jump_opengl.wav\" type mpegvideo alias j", NULL, 0, NULL);
 				mciSendString("play j", NULL, 0, NULL);
 
 			}
+
 			rlegmov=200;
 			llegmov=200;
 			glutIdleFunc(move2);
 		}
 	if(key=='s'|key=='S'&&downflag!=1&&!showf)
 	{
-	    if(mainpage==0&&instruct==0){
+
+		if(mainpage==0&&instruct==0){
 			mciSendString("close s", NULL, 0, NULL);
 			mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
 			mciSendString("play s", NULL, 0, NULL);
@@ -1267,6 +1821,8 @@ void keyboard(unsigned char key,int x,int y)
 	if(key=='r'|key=='R')
 		if(lost==1||instruct==1)
 		{
+			// mciSendString("play kgf", NULL, 0, NULL);
+
 			lost=0;
 			numlen=0;
 			for(i=0;i<n;i++)
@@ -1311,9 +1867,11 @@ void special(int key, int x,int y)
 		if(game!=1)
 		{
 			mainpage=0;
-            score=0;
+         		score=0;
 			level=1;
 			game=1;
+			//mciSendString("play pirate", NULL, 0, NULL);
+
 			glutIdleFunc(move);
 			display();
 		}
@@ -1326,23 +1884,36 @@ void special(int key, int x,int y)
 	}
 }
 
+
+  time_t t1, t2, previous_pause_time=0;
+
+  //open the audio file
+
+
 int main(int argc,char **argv)
 {
     	glutInit(&argc,argv);
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 	glutInitWindowSize(1500,1500);
 	glutInitWindowPosition(0,0);
-	glutCreateWindow("DESTINATION REACHER");
+	glutCreateWindow("JUMPING JOY");
 	glutDisplayFunc(display);
 	myinit();
 	glutKeyboardFunc(keyboard);
 	glutSpecialFunc(special);
 	glutIdleFunc(move);
+
+	//sndPlaySound(TEXT("song.wav"),SND_ASYNC | SND_LOOP);
 	 mciSendString("open \"song.wav\" type mpegvideo alias mp3", NULL, 0, NULL);
 	 mciSendString("open \"kgf_opengl.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
 	 mciSendString("open \"pirates_opengl.wav\" type mpegvideo alias pirate", NULL, 0, NULL);
 	 mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
 	 mciSendString("open \"jump_opengl.wav\" type mpegvideo alias j", NULL, 0, NULL);
 
+
 	glutMainLoop();
 }
+
+
+
+
