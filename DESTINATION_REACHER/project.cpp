@@ -728,13 +728,15 @@ void arrow()						//arrows
 void mstickmanj()					//instruction page stickman
 {
 	glColor3f(0.0,0.0,0.0);
-	glLineWidth(15);
+	glLineWidth(10);
 	glBegin(GL_POLYGON);				//head
 	glColor3f(0.0,0.0,0.0);
-	glVertex2f(210,490);
-	glVertex2f(226,489);
-	glVertex2f(227,518);
-	glVertex2f(211,518);
+	float theta;
+		glBegin(GL_POLYGON);
+		for(int z=0;z<360;z++){
+	        theta=z*3.14/180;
+	        glVertex2f(220+15*cos(theta),500+15*sin(theta));
+		}
 	glEnd();
 
 	glBegin(GL_LINES);				//body
@@ -762,7 +764,7 @@ void mstickmanj()					//instruction page stickman
 
 void arrow2()						//arrow 2
 {
-	glColor3f(1.0,1.0,1.0);
+	glColor3f(1.0,0.0,1.0);
 	glBegin(GL_LINES);
 	glVertex2f(250,227);
 	glVertex2f(400,227);
@@ -776,13 +778,15 @@ void arrow2()						//arrow 2
 void mstickman()					//mainpage stickman
 {
 	glColor3f(0.0,0.0,0.0);
-	glLineWidth(15);
+	glLineWidth(10);
 	glBegin(GL_POLYGON);
 	glColor3f(0.0,0.0,0.0);
-	glVertex2f(210,290);
-	glVertex2f(226,289);
-	glVertex2f(227,318);
-	glVertex2f(211,318);
+	float theta;
+		glBegin(GL_POLYGON);
+		for(int z=0;z<360;z++){
+	        theta=z*3.14/180;
+	        glVertex2f(220+15*cos(theta),300+15*sin(theta));
+		}
 	glEnd();
 	glBegin(GL_LINES);
 	glColor3f(0.0,0.0,0.0);
@@ -845,16 +849,17 @@ void platform()						//To draw a platform
 void stickman()						//To draw a stickman
 {
 
-	glLineWidth(15);
+	glLineWidth(10);
 	if(level==1)
 	glColor3f(0.0,0.0,0.0);
 	else
 	glColor3f(0.0,0.0,0.0);
-	glBegin(GL_POLYGON);
-	glVertex2f(com+10,s+90);
-	glVertex2f(com+26,s+89);
-	glVertex2f(com+27,s+118);
-	glVertex2f(com+11,s+118);
+	float theta;
+		glBegin(GL_POLYGON);
+		for(int z=0;z<360;z++){
+	        theta=z*3.14/180;
+	        glVertex2f(com+20+15*cos(theta),s+100+15*sin(theta));
+		}
 	glEnd();
 
 	glBegin(GL_LINES);
@@ -1601,7 +1606,7 @@ void instructfunc()				//To view the instruction
 	glColor3f(1.0,1.0,1.0);
 	println(450,900,"Instructions");
 	glColor3f(1.0,1.0,1.0);
-	println(150,600,"Press W for Jump");
+	println(155,540,"Press W for Jump");
 	glColor3f(1.0,1.0,1.0);
 	println(250,250,"Press S to Roll");
 	glColor3f(1.0,1.0,1.0);
