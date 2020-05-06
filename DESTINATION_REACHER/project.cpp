@@ -13,8 +13,10 @@ int i,j,instruct=0,game=0;
 
 void move(void);
 
-void circle_draw(int size)					//To draw a circle
+void circle_draw(int size)
+//To draw a circle
 {
+	glColor3f(0.0,0.0,0.0);
 	glBegin(GL_POLYGON);
 	for(i=0;i<360;i++)
 	glVertex2f(25*cos(i*degtorad)*size,25*sin(i*degtorad)*size);
@@ -481,6 +483,7 @@ void trees1()						//to draw a tree in level 2
 	}
 }
 
+
 void backbuild()					//to draw a buildings in level1
 {
 	if(level==1)
@@ -488,53 +491,94 @@ void backbuild()					//to draw a buildings in level1
 	glPushMatrix();
 	glTranslated(-250,0,0);
 
-	glColor3f(0.35,0.16,0.14);
+	glColor3f(0.25,0.0,0.25);
 	glBegin(GL_POLYGON);				//build 1
 	glVertex2f(buildmove,150);
 	glVertex2f(buildmove,700);
-	glVertex2f(buildmove+250,700);
-	glVertex2f(buildmove+250,150);
+	glVertex2f(buildmove+245,700);
+	glVertex2f(buildmove+245,150);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.45,0.16,0.40);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+50,600);
-	glVertex2f(buildmove+50,650);
-	glVertex2f(buildmove+100,650);
-	glVertex2f(buildmove+100,600);
+	glVertex2f(buildmove+245,150);
+	glVertex2f(buildmove+245,700);
+	glVertex2f(buildmove+265,720);
+	glVertex2f(buildmove+265,180);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.35,0.16,0.75);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+150,600);
-	glVertex2f(buildmove+150,650);
-	glVertex2f(buildmove+200,650);
-	glVertex2f(buildmove+200,600);
+	glVertex2f(buildmove,700);
+	glVertex2f(buildmove+20,720);
+	glVertex2f(buildmove+265,720);
+	glVertex2f(buildmove+245,700);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.34,0.50,0.1);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+50,500);
-	glVertex2f(buildmove+50,550);
-	glVertex2f(buildmove+100,550);
-	glVertex2f(buildmove+100,500);
+	glVertex2f(buildmove-3,470);
+	glVertex2f(buildmove-3,500);
+	glVertex2f(buildmove+248,500);
+	glVertex2f(buildmove+248,470);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.1,0.0,0.07);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+150,500);
-	glVertex2f(buildmove+150,550);
-	glVertex2f(buildmove+200,550);
-	glVertex2f(buildmove+200,500);
+	glVertex2f(buildmove+90,150);
+	glVertex2f(buildmove+90,370);
+	glVertex2f(buildmove+135,370);
+	glVertex2f(buildmove+135,150);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.24,0.50,0.9);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+100,150);
-	glVertex2f(buildmove+100,350);
-	glVertex2f(buildmove+150,350);
-	glVertex2f(buildmove+150,150);
+	glVertex2f(buildmove+1,501);
+	glVertex2f(buildmove+1,698);
+	glVertex2f(buildmove+40,698);
+	glVertex2f(buildmove+40,501);
 	glEnd();
+
+	glColor3f(0.24,0.50,0.9);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+42,501);
+	glVertex2f(buildmove+42,698);
+	glVertex2f(buildmove+81,698);
+	glVertex2f(buildmove+81,501);
+	glEnd();
+
+	glColor3f(0.24,0.50,0.9);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+83,501);
+	glVertex2f(buildmove+83,698);
+	glVertex2f(buildmove+122,698);
+	glVertex2f(buildmove+122,501);
+	glEnd();
+
+	glColor3f(0.24,0.50,0.9);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+124,501);
+	glVertex2f(buildmove+124,698);
+	glVertex2f(buildmove+163,698);
+	glVertex2f(buildmove+163,501);
+	glEnd();
+
+	glColor3f(0.24,0.50,0.9);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+165,501);
+	glVertex2f(buildmove+165,698);
+	glVertex2f(buildmove+204,698);
+	glVertex2f(buildmove+204,501);
+	glEnd();
+
+	glColor3f(0.24,0.50,0.9);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+206,501);
+	glVertex2f(buildmove+206,698);
+	glVertex2f(buildmove+244,698);
+	glVertex2f(buildmove+244,501);
+	glEnd();
+
 
 	glColor3f(0.35,0.16,0.14);				//build 2
 	glBegin(GL_POLYGON);
@@ -544,7 +588,23 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+750,150);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.25,0.16,0.04);				//build 2
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+500,700);
+	glVertex2f(buildmove+520,720);
+	glVertex2f(buildmove+770,720);
+	glVertex2f(buildmove+750,700);
+	glEnd();
+
+	glColor3f(0.15,0.16,0.07);				//build 2
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+750,150);
+	glVertex2f(buildmove+750,700);
+	glVertex2f(buildmove+770,720);
+	glVertex2f(buildmove+770,170);
+	glEnd();
+
+	glColor3f(0.24,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+550,600);
 	glVertex2f(buildmove+550,650);
@@ -552,7 +612,7 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+600,600);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.24,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+650,600);
 	glVertex2f(buildmove+650,650);
@@ -560,7 +620,7 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+700,600);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.24,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+550,500);
 	glVertex2f(buildmove+550,550);
@@ -568,7 +628,7 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+600,500);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.24,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+650,500);
 	glVertex2f(buildmove+650,550);
@@ -591,55 +651,96 @@ void backbuild()					//to draw a buildings in level1
 	glPushMatrix();
 	glTranslated(-290,0,0);
 
-	glColor3f( 0.858824,0.858824,0.439216);			//build 1
-	glBegin(GL_POLYGON);
+	glColor3f(0.15,0.0,0.15);
+	glBegin(GL_POLYGON);				//build 1
 	glVertex2f(buildmove,150);
 	glVertex2f(buildmove,700);
-	glVertex2f(buildmove+250,700);
-	glVertex2f(buildmove+250,150);
+	glVertex2f(buildmove+245,700);
+	glVertex2f(buildmove+245,150);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.35,0.06,0.30);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+50,600);
-	glVertex2f(buildmove+50,650);
-	glVertex2f(buildmove+100,650);
-	glVertex2f(buildmove+100,600);
+	glVertex2f(buildmove+245,150);
+	glVertex2f(buildmove+245,700);
+	glVertex2f(buildmove+265,720);
+	glVertex2f(buildmove+265,180);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.25,0.06,0.65);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+150,600);
-	glVertex2f(buildmove+150,650);
-	glVertex2f(buildmove+200,650);
-	glVertex2f(buildmove+200,600);
+	glVertex2f(buildmove,700);
+	glVertex2f(buildmove+20,720);
+	glVertex2f(buildmove+265,720);
+	glVertex2f(buildmove+245,700);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.24,0.30,0.05);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+50,500);
-	glVertex2f(buildmove+50,550);
-	glVertex2f(buildmove+100,550);
-	glVertex2f(buildmove+100,500);
+	glVertex2f(buildmove-3,470);
+	glVertex2f(buildmove-3,500);
+	glVertex2f(buildmove+248,500);
+	glVertex2f(buildmove+248,470);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.1,0.0,0.07);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+150,500);
-	glVertex2f(buildmove+150,550);
-	glVertex2f(buildmove+200,550);
-	glVertex2f(buildmove+200,500);
+	glVertex2f(buildmove+90,150);
+	glVertex2f(buildmove+90,370);
+	glVertex2f(buildmove+135,370);
+	glVertex2f(buildmove+135,150);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.20,0.50,0.85);
 	glBegin(GL_POLYGON);
-	glVertex2f(buildmove+100,150);
-	glVertex2f(buildmove+100,350);
-	glVertex2f(buildmove+150,350);
-	glVertex2f(buildmove+150,150);
+	glVertex2f(buildmove+1,501);
+	glVertex2f(buildmove+1,698);
+	glVertex2f(buildmove+40,698);
+	glVertex2f(buildmove+40,501);
 	glEnd();
 
-	glColor3f( 0.858824,0.858824,0.439216);			//build 2
+	glColor3f(0.20,0.50,0.85);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+42,501);
+	glVertex2f(buildmove+42,698);
+	glVertex2f(buildmove+81,698);
+	glVertex2f(buildmove+81,501);
+	glEnd();
+
+	glColor3f(0.20,0.50,0.85);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+83,501);
+	glVertex2f(buildmove+83,698);
+	glVertex2f(buildmove+122,698);
+	glVertex2f(buildmove+122,501);
+	glEnd();
+
+	glColor3f(0.20,0.50,0.85);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+124,501);
+	glVertex2f(buildmove+124,698);
+	glVertex2f(buildmove+163,698);
+	glVertex2f(buildmove+163,501);
+	glEnd();
+
+	glColor3f(0.20,0.50,0.85);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+165,501);
+	glVertex2f(buildmove+165,698);
+	glVertex2f(buildmove+204,698);
+	glVertex2f(buildmove+204,501);
+	glEnd();
+
+	glColor3f(0.20,0.50,0.85);
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+206,501);
+	glVertex2f(buildmove+206,698);
+	glVertex2f(buildmove+244,698);
+	glVertex2f(buildmove+244,501);
+	glEnd();
+
+
+	glColor3f(0.35,0.36,0.04);				//build 2
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+500,150);
 	glVertex2f(buildmove+500,700);
@@ -647,7 +748,23 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+750,150);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.15,0.06,0.06);				//build 2
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+500,700);
+	glVertex2f(buildmove+520,720);
+	glVertex2f(buildmove+770,720);
+	glVertex2f(buildmove+750,700);
+	glEnd();
+
+	glColor3f(0.21,0.20,0.09);				//build 2
+	glBegin(GL_POLYGON);
+	glVertex2f(buildmove+750,150);
+	glVertex2f(buildmove+750,700);
+	glVertex2f(buildmove+770,720);
+	glVertex2f(buildmove+770,170);
+	glEnd();
+
+	glColor3f(0.34,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+550,600);
 	glVertex2f(buildmove+550,650);
@@ -655,7 +772,7 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+600,600);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.34,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+650,600);
 	glVertex2f(buildmove+650,650);
@@ -663,7 +780,7 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+700,600);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.34,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+550,500);
 	glVertex2f(buildmove+550,550);
@@ -671,7 +788,7 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+600,500);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.34,0.50,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+650,500);
 	glVertex2f(buildmove+650,550);
@@ -679,7 +796,7 @@ void backbuild()					//to draw a buildings in level1
 	glVertex2f(buildmove+700,500);
 	glEnd();
 
-	glColor3f(1.0,0.0,0.0);
+	glColor3f(0.0,0.0,1.0);
 	glBegin(GL_POLYGON);
 	glVertex2f(buildmove+600,150);
 	glVertex2f(buildmove+600,350);
@@ -689,7 +806,6 @@ void backbuild()					//to draw a buildings in level1
 	glPopMatrix();
 	}
 }
-
 void mplatform()
 {
 	glColor3f(0.0,0.0,0.0);				//main platform
@@ -764,7 +880,7 @@ void mstickmanj()					//instruction page stickman
 
 void arrow2()						//arrow 2
 {
-	glColor3f(1.0,0.0,1.0);
+	glColor3f(1.0,1.0,1.0);
 	glBegin(GL_LINES);
 	glVertex2f(250,227);
 	glVertex2f(400,227);
@@ -1619,6 +1735,7 @@ void instructfunc()				//To view the instruction
 	glPushMatrix();
 	glColor3f(1.0,1.0,1.0);
 	glTranslatef(450.0,225.0,0);
+	glColor3f(0.0,0.0,0.0);
 	circle_draw(1);
 	glPopMatrix();
 }
@@ -1634,8 +1751,8 @@ void display(void)				//To display
     	else if(mainpage==0)
 	{
 
-     		 mciSendString("pause kgf", NULL, 0, NULL);
-    		 mciSendString("play pirate repeat", NULL, 0, NULL);
+     		//// mciSendString("pause kgf", NULL, 0, NULL);
+    	////	 mciSendString("play pirate repeat", NULL, 0, NULL);
 		glClear(GL_COLOR_BUFFER_BIT);
 		if(level==1)
 		glClearColor(0.2,0.3,0.7,0.9);
@@ -1653,11 +1770,11 @@ void display(void)				//To display
 		glColor3f(1.0,1.0,1.0);
 		else
 		glColor3f(1.0,1.0,1.0);
-		mciSendString("pause pirate", NULL, 0, NULL);
+		mciSendString("pause kgf", NULL, 0, NULL);
 		mciSendString("open \"fail_opengl.wav\" type mpegvideo alias f", NULL, 0, NULL);
 		 mciSendString("play f ", NULL, 0, NULL);
 
-
+		 glColor3f(1.0,1.0,0.0);
 		println(500,500,"Game Over");
 		println(500,450,"Score:");
 		for(i=0;i<=n;i++)
@@ -1909,7 +2026,7 @@ int main(int argc,char **argv)
 	glutIdleFunc(move);
 
 	//sndPlaySound(TEXT("song.wav"),SND_ASYNC | SND_LOOP);
-	 mciSendString("open \"song.wav\" type mpegvideo alias mp3", NULL, 0, NULL);
+	// mciSendString("open \"song.wav\" type mpegvideo alias mp3", NULL, 0, NULL);
 	 mciSendString("open \"kgf_opengl.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
 	 mciSendString("open \"pirates_opengl.wav\" type mpegvideo alias pirate", NULL, 0, NULL);
 	 mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
