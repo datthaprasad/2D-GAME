@@ -1679,9 +1679,9 @@ void instructfunc()				//To view the instruction
 	glColor3f(1.0,1.0,0.0);
 	println(450,900,"Instructions");
 	glColor3f(1.0,1.0,1.0);
-	println(155,540,"Press W for Jump");
+	println(155,540,"Press LEFT for Jump");
 	glColor3f(1.0,1.0,1.0);
-	println(250,250,"Press S to Roll");
+	println(250,250,"Press RIGHT to Roll");
 	glColor3f(1.0,1.0,1.0);
 	println(600,400,"Press R to Restart Game");
 	mstickman();
@@ -1867,36 +1867,8 @@ if(level==2)
 
 void keyboard(unsigned char key,int x,int y)
 {
-	if(key=='w'|key=='W')
-		if(flag!=1&&upflag!=1&&!showf)
-		{
-			if(mainpage==0&&instruct==0){
-				mciSendString("close j", NULL, 0, NULL);
-				mciSendString("open \"jump_opengl.wav\" type mpegvideo alias j", NULL, 0, NULL);
-				mciSendString("play j", NULL, 0, NULL);
 
-			}
 
-			rlegmov=200;
-			llegmov=200;
-			glutIdleFunc(move2);
-		}
-	if(key=='s'|key=='S'&&downflag!=1&&!showf)
-	{
-
-		if(mainpage==0&&instruct==0){
-			mciSendString("close s", NULL, 0, NULL);
-			mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
-			mciSendString("play s", NULL, 0, NULL);
-
-		}
-		roll=1;
-		llegmov=200;
-		rlegmov=200;
-		upflag=1;
-		down=1;
-		display();
-	}
 	if(key=='r'|key=='R')
 		if(lost==1||instruct==1)
 		{
@@ -1942,6 +1914,39 @@ void special(int key, int x,int y)
 {
 	switch(key)
 	{
+	case (GLUT_KEY_RIGHT):
+			if(downflag!=1&&!showf)
+			{
+
+				if(mainpage==0&&instruct==0){
+					mciSendString("close s", NULL, 0, NULL);
+					mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
+					mciSendString("play s", NULL, 0, NULL);
+
+				}
+				roll=1;
+				llegmov=200;
+				rlegmov=200;
+				upflag=1;
+				down=1;
+				display();
+			}
+			break;
+	case (GLUT_KEY_LEFT):
+				if(flag!=1&&upflag!=1&&!showf)
+				{
+					if(mainpage==0&&instruct==0){
+						mciSendString("close j", NULL, 0, NULL);
+						mciSendString("open \"jump_opengl.wav\" type mpegvideo alias j", NULL, 0, NULL);
+						mciSendString("play j", NULL, 0, NULL);
+
+					}
+
+					rlegmov=200;
+					llegmov=200;
+					glutIdleFunc(move2);
+				}
+			break;
 	case (GLUT_KEY_UP):
 		if(game!=1)
 		{
@@ -1984,8 +1989,9 @@ int main(int argc,char **argv)
 
 	//sndPlaySound(TEXT("song.wav"),SND_ASYNC | SND_LOOP);
 	// mciSendString("open \"song.wav\" type mpegvideo alias mp3", NULL, 0, NULL);
-	 mciSendString("open \"kgf_opengl.wav\" type mpegvideo alias kgf1", NULL, 0, NULL);
-	 mciSendString("open \"vathi.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
+	//sndPlaySound(TEXT("vathi.wav"),SND_ASYNC);
+	 mciSendString("open \"pirates_opengl.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
+	// mciSendString("open \"dp2.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
 	 mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
 	 mciSendString("open \"jump_opengl.wav\" type mpegvideo alias j", NULL, 0, NULL);
 
