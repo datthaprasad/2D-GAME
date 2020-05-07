@@ -46,63 +46,27 @@ void trees()							//To draw a tree in level 1
 	glTranslated(-100,0,0);
 
 	glBegin(GL_POLYGON);				//tree1
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+500,200);
-	glVertex2f(a+530,450);
-	glVertex2f(a+550,450);
-	glColor3f(0.0,0.0,0.0);
-	glVertex2f(a+530,200);
-	glEnd();
+		glColor3f(0.3,0.1,0.0);
+		glVertex2f(a+500,200);
+		glVertex2f(a+500,360);
+		glVertex2f(a+530,360);
+		glColor3f(0.0,0.0,0.0);
+		glVertex2f(a+530,200);
+		glEnd();
 
-	glBegin(GL_POLYGON);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+535,450);
-	glVertex2f(a+565,500);
-	glVertex2f(a+578,500);
-	glVertex2f(a+550,450);
-	glEnd();
+		glBegin(GL_POLYGON);
+		glColor3f(0.4,0.6,0.0);
+		glVertex2f(a+450,360);
+		glVertex2f(a+515,700);
+		glVertex2f(a+515,350);
+		glEnd();
 
-	glLineWidth(10.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+535,440);
-	glVertex2f(a+485,555);
-	glVertex2f(a+570,500);
-	glVertex2f(a+535,585);
-	glVertex2f(a+575,500);
-	glVertex2f(a+595,565);
-	glEnd();
-
-	glLineWidth(6.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+514,490);
-	glVertex2f(a+535,555);
-	glEnd();
-
-	glLineWidth(5.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+548,555);
-	glVertex2f(a+570,590);
-	glVertex2f(a+578,515);
-	glVertex2f(a+635,580);
-	glEnd();
-
-	glLineWidth(3.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+500,515);
-	glVertex2f(a+520,565);
-	glEnd();
-
- 	glColor3f(0.4,0.6,0.0);
-      	drwcl(a+514,510,50,0,360);			//leaf
-      	drwcl(a+585,520,50,0,360);
-      	drwcl(a+515,565,40,0,360);
-      	drwcl(a+584,580,40,0,360);
-      	drwcl(a+534,610,30,0,360);
-	glPopMatrix();
+	    glBegin(GL_POLYGON);
+		glColor3f(0.5,0.5,0.0);
+		glVertex2f(a+580,360);
+		glVertex2f(a+515,700);
+		glVertex2f(a+515,350);
+		glEnd();	glPopMatrix();
 
 	glPushMatrix();
 	glTranslated(-720,0,0);
@@ -230,64 +194,28 @@ void trees()							//To draw a tree in level 1
 	glPushMatrix();
 	glTranslated(1000,0,0);
 
-	glBegin(GL_POLYGON);				//tree4
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+500,200);
-	glVertex2f(a+530,450);
-	glVertex2f(a+550,450);
-	glColor3f(0.0,0.0,0.0);
-	glVertex2f(a+530,200);
-	glEnd();
+	glBegin(GL_POLYGON);				//tree1
+		glColor3f(0.3,0.1,0.0);
+		glVertex2f(a+500,200);
+		glVertex2f(a+500,360);
+		glVertex2f(a+530,360);
+		glColor3f(0.0,0.0,0.0);
+		glVertex2f(a+530,200);
+		glEnd();
 
-	glBegin(GL_POLYGON);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+535,450);
-	glVertex2f(a+565,500);
-	glVertex2f(a+578,500);
-	glVertex2f(a+550,450);
-	glEnd();
+		glBegin(GL_POLYGON);
+		glColor3f(0.4,0.6,0.0);
+		glVertex2f(a+450,360);
+		glVertex2f(a+515,700);
+		glVertex2f(a+515,350);
+		glEnd();
 
-	glLineWidth(10.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+535,440);
-	glVertex2f(a+485,555);
-	glVertex2f(a+570,500);
-	glVertex2f(a+535,585);
-	glVertex2f(a+575,500);
-	glVertex2f(a+595,565);
-	glEnd();
-
-	glLineWidth(6.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+514,490);
-	glVertex2f(a+535,555);
-	glEnd();
-
-	glLineWidth(5.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+548,555);
-	glVertex2f(a+570,590);
-	glVertex2f(a+578,515);
-	glVertex2f(a+635,580);
-	glEnd();
-
-	glLineWidth(3.0);
-	glBegin(GL_LINES);
-	glColor3f(0.3,0.1,0.0);
-	glVertex2f(a+500,515);
-	glVertex2f(a+520,565);
-	glEnd();
-
- 	glColor3f(0.4,0.6,0.0);
-      	drwcl(a+514,510,50,0,360);			//leaf
-      	drwcl(a+585,520,50,0,360);
-      	drwcl(a+515,565,40,0,360);
-      	drwcl(a+584,580,40,0,360);
-      	drwcl(a+534,610,30,0,360);
-	glPopMatrix();
+	    glBegin(GL_POLYGON);
+		glColor3f(0.5,0.5,0.0);
+		glVertex2f(a+580,360);
+		glVertex2f(a+515,700);
+		glVertex2f(a+515,350);
+		glEnd();	glPopMatrix();
 
 	glPushMatrix();
 	glTranslated(1590,0,0);
@@ -357,6 +285,34 @@ void trees1()						//to draw a tree in level 2
 {
 	if(level==2)
 	{
+
+		glPushMatrix();
+			glTranslated(-150,0,0);
+
+			glBegin(GL_POLYGON);				//tree1
+				glColor3f(0.3,0.1,0.0);
+				glVertex2f(a+500,200);
+				glVertex2f(a+500,360);
+				glVertex2f(a+530,360);
+				glColor3f(0.0,0.0,0.0);
+				glVertex2f(a+530,200);
+				glEnd();
+
+				glBegin(GL_POLYGON);
+				glColor3f(0.4,0.6,0.0);
+				glVertex2f(a+450,360);
+				glVertex2f(a+515,700);
+				glVertex2f(a+515,350);
+				glEnd();
+
+			    glBegin(GL_POLYGON);
+				glColor3f(0.5,0.5,0.0);
+				glVertex2f(a+580,360);
+				glVertex2f(a+515,700);
+				glVertex2f(a+515,350);
+				glEnd();	glPopMatrix();
+
+
 	glPushMatrix();
 	glTranslated(150,0,0);
 
@@ -889,6 +845,7 @@ void arrow2()						//arrow 2
 	glVertex2f(400,227);
 	glVertex2f(380,215);
 	glEnd();
+
 }
 
 void mstickman()					//mainpage stickman
@@ -1719,7 +1676,7 @@ void show()
 
 void instructfunc()				//To view the instruction
 {
-	glColor3f(1.0,1.0,1.0);
+	glColor3f(1.0,1.0,0.0);
 	println(450,900,"Instructions");
 	glColor3f(1.0,1.0,1.0);
 	println(155,540,"Press W for Jump");
@@ -2018,7 +1975,7 @@ int main(int argc,char **argv)
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 	glutInitWindowSize(1500,1500);
 	glutInitWindowPosition(0,0);
-	glutCreateWindow("JUMPING JOY");
+	glutCreateWindow("DESTINATION REACHER");
 	glutDisplayFunc(display);
 	myinit();
 	glutKeyboardFunc(keyboard);
@@ -2027,8 +1984,8 @@ int main(int argc,char **argv)
 
 	//sndPlaySound(TEXT("song.wav"),SND_ASYNC | SND_LOOP);
 	// mciSendString("open \"song.wav\" type mpegvideo alias mp3", NULL, 0, NULL);
-	 mciSendString("open \"kgf_opengl.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
-	 mciSendString("open \"pirates_opengl.wav\" type mpegvideo alias pirate", NULL, 0, NULL);
+	 mciSendString("open \"kgf_opengl.wav\" type mpegvideo alias kgf1", NULL, 0, NULL);
+	 mciSendString("open \"vathi.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
 	 mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
 	 mciSendString("open \"jump_opengl.wav\" type mpegvideo alias j", NULL, 0, NULL);
 
