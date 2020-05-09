@@ -885,7 +885,7 @@ void mstickman()					//mainpage stickman
 }
 
 
-void cloud()						//To draw a cloud
+/*void cloud()						//To draw a cloud
 {
 
   	glPushMatrix();
@@ -901,7 +901,7 @@ void cloud()						//To draw a cloud
    	drwcl(310,590,35,0,360);
 	circle_draw(0);
    	glPopMatrix();
-}
+}*/
 
 
 void platform()						//To draw a platform
@@ -1717,7 +1717,7 @@ void display(void)				//To display
 		glClearColor(0.2,0.3,0.7,0.9);
 		backbuild();
 		platform();
-		cloud();
+	//	cloud();
 		trees();
 		trees1();
 
@@ -1990,7 +1990,7 @@ int main(int argc,char **argv)
 	//sndPlaySound(TEXT("song.wav"),SND_ASYNC | SND_LOOP);
 	// mciSendString("open \"song.wav\" type mpegvideo alias mp3", NULL, 0, NULL);
 	//sndPlaySound(TEXT("vathi.wav"),SND_ASYNC);
-	 mciSendString("open \"pirates_opengl.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
+	mciSendString("open \"pirates_opengl.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
 	// mciSendString("open \"dp2.wav\" type mpegvideo alias kgf", NULL, 0, NULL);
 	 mciSendString("open \"spin_opengl.wav\" type mpegvideo alias s", NULL, 0, NULL);
 	 mciSendString("open \"jump_opengl.wav\" type mpegvideo alias j", NULL, 0, NULL);
